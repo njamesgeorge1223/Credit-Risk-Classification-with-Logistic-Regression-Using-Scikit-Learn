@@ -1,4 +1,4 @@
-This folder holds the input file for the IPython Notebook, CryptoClustering.ipynb.
+This folder holds the input file for the IPython Notebook, CreditRiskClassification.ipynb.
 
 ----
 
