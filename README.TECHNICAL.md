@@ -1,4 +1,4 @@
-# **Credit Risk Classification using Unsupervised Machine Learning**
+# **Credit Risk Classification using Logistic Regression**
 
 ----
 
