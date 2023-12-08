@@ -11,12 +11,12 @@ The purpose of this analysis is to evaluate the performance of two supervised ma
 To accomplish the analysis, the machine learning process includes the following steps:
 
 1. Separate the data into a features variable, X, and a labels variable, y.
-2. Check the labels variable's value count.
+2. Check the labels value count.
 3. Further split the features and labels variables into training and testing data sets.
 4. Fit a Logistic Regression model by using the training data.
 5. Evaluate the model’s performance using the testing data to find the accuracy, precision, and recall scores.
 8. Resample the data using the Scikit-learn function, RandomOverSampler, to address the labels's value count imbalance.
-9. Check the labels variable's value count again.
+9. Check the labels value count again.
 10. Create and fit another Logistic Regression model with the resampled data.
 11. Evaluate the performance of the resampled model using the same metrics.
 
