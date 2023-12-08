@@ -40,6 +40,8 @@ To accomplish the analysis, the machine learning process includes the following 
 * Recall (Healthy Loans): 99%
 * Recall (High-risk Loans): 91%
 
+<img width="491" alt="Screenshot 2023-12-08 at 2 12 14 PM" src="https://github.com/njgeorge000158/credit-risk-classification/assets/137228821/3ba7b976-5cac-4154-9247-5a2dec85c37d">
+
 ## Summary
 
 The first Logistic Regression model does an excellent job predicting healthy loans with a small number of false positives and negatives leading to a precision score of 100%, a recall score of 99%, and an f1-score of 100%.  Nevertheless, this model less accurately predicts high-risk loans with a precision of 85%, a recall of 91%, and an f1-score of 88%. The balanced accuracy, 99%, is higher than the actual accuracy, 95%, because of the significant difference in labels's value counts. The first model's potential for an increase in accuracy and the comparatively inadequate performance in predicting high-risk loans vs. health loans are concerning. Thus, the model warrants further optimization either by closing the value count gap with additional data or random oversampling: the second model uses the latter to solve this problem.
