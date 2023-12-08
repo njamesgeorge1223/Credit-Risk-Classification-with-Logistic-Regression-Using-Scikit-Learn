@@ -6,7 +6,7 @@
 
 ## Overview of the Analysis
 
-The purpose of this analysis is to evaluate the performance of two supervised machine learning models for predicting consumer loan credit risk. These Logistic Regression models use a data set of historical lending activity from a peer-to-peer lending services company to identify the creditworthiness of borrowers. Specifically, the models predict whether a loan is healthy or high-risk by analyzing the provided applicant information such as loan size, interest rate, borrower income, debt-to-income ratio, number of accounts, derogatory marks, and total debt.  Moreover, although the data set is comprehensive, there is significantly more information about healthy loans than high-risk loans (75,036 records vs. 2,500 records). With this in mind, the second model compensates for this discrepancy.
+The purpose of this analysis is to evaluate the performance of two supervised machine learning models for predicting consumer loan credit risk. These Logistic Regression models use a data set of historical activity from a peer-to-peer lending services company to identify the creditworthiness of borrowers. Specifically, the models predict whether a loan is healthy or high-risk by analyzing the provided applicant information such as loan size, interest rate, borrower income, debt-to-income ratio, number of accounts, derogatory marks, and total debt.  Moreover, although the data set is comprehensive, there is significantly more information about healthy loans than high-risk loans (75,036 records vs. 2,500 records). With this in mind, the second model compensates for this discrepancy.
 
 To accomplish the analysis, the machine learning process includes the following steps:
 
