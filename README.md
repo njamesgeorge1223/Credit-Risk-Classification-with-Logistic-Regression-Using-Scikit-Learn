@@ -28,7 +28,7 @@ To accomplish the analysis, the machine learning process includes the following 
 * Precision (Health Loans): 100%
 * Precision (High-risk Loans): 85%
 * Recall (Healthy Loans): 99%
-* Recall (High-risk Loans): 99%
+* Recall (High-risk Loans): 91%
 
 <img width="483" alt="Screenshot 2023-12-08 at 1 52 28 PM" src="https://github.com/njgeorge000158/credit-risk-classification/assets/137228821/aa699f09-e45a-4030-acd7-de834576c262">
 
