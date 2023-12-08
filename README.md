@@ -18,7 +18,7 @@ To accomplish the analysis, the machine learning process includes the following 
 8. Resample the data using the Scikit-learn function, RandomOverSampler, to address the labels's value count imbalance.
 9. Check the labels value count again.
 10. Create and fit another Logistic Regression model with the resampled data.
-11. Evaluate the performance of the resampled model using the same metrics.
+11. Evaluate the performance of the second model using the same metrics.
 
 ## Results
 
