@@ -48,4 +48,8 @@ The first Logistic Regression model does an excellent job predicting healthy loa
 
 In terms of accuracy, the second Logistic Regression model with random oversampling matches the first model for predicting healthy loans and outperforms it for high-risk loans. For instance, the number of accepted healthy loans falls (18,663 to 18,649); the number of rejected high-risk loans expands (563 to 615); the number of false positives increases slightly (102 to 116); and the number of false negatives significantly drops (56 to 4). Moreover, using random oversampling to generate additional synthetic samples for the minority label class eliminates the labels's value count discrepancy leading to, among other things, the balanced accuracy score matching the overall accuracy score, 99%. For healthy loans, both models have 100% precision, 99% recall, and 100% f1-scores; for high-risk loans, although the precision, 85%, declines by 1% to 84%, the recall, 92%, increases by 8% to 99%, and the f1-score, 88%, increases by 3% to 91%. Consequently, using random oversampling with the Logistic Regression model maintains its identification of healthy loans while improving its identification of high-risk loans.
 
-Ultimately, the second Logistic Regression model trained with resampled data demonstrates a significant improvement in predicting high-risk loans while maintaining comparable performance for healthy loans. Consequently, I recommend it as a better choice for credit risk analysis.
+----
+
+### Copyright
+
+N. James George © 2023. All Rights Reserved.
