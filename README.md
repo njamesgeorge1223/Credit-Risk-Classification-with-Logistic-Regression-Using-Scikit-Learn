@@ -6,9 +6,9 @@
 
 ## Overview of the Analysis
 
-The purpose of this analysis is to evaluate the performance of two supervised machine learning models for predicting consumer loan credit risk. These Logistic Regression models use a data set of historical lending activity from a peer-to-peer lending services company to identify the creditworthiness of borrowers. Specifically, the models predict whether the loan is healthy or high-risk by analyzing the provided applicant information such as loan size, interest rate, borrower income, debt-to-income ratio, number of accounts, derogatory marks, and total debt.  Moreover, although the data set is comprehensive, there is significantly more information about healthy loans than high-risk loans (75,036 records vs. 2,500 records). With this in mind, the second machine learning compensated for this discrepancy.
+The purpose of this analysis is to evaluate the performance of two supervised machine learning models for predicting consumer loan credit risk. These Logistic Regression models use a data set of historical lending activity from a peer-to-peer lending services company to identify the creditworthiness of borrowers. Specifically, the models predict whether the loan is healthy or high-risk by analyzing the provided applicant information such as loan size, interest rate, borrower income, debt-to-income ratio, number of accounts, derogatory marks, and total debt.  Moreover, although the data set is comprehensive, there is significantly more information about healthy loans than high-risk loans (75,036 records vs. 2,500 records). With this in mind, the second model compensates for this discrepancy.
 
-For the two models, the machine learning process included the following steps:
+To accomplish the analysis, the machine learning process included the following steps:
 
 1. Separate the data into a features variable, X, and a labels variable, y.
 2. Check the labels variable's value count.
@@ -22,42 +22,28 @@ For the two models, the machine learning process included the following steps:
 
 ## Results
 
-Using bulleted lists, describe the balanced accuracy scores and the precision and recall scores of all machine learning models.
+- Machine Learning Model 1: Logistic Regression with Original Data
+* Overall Accuracy: 95.2%
+* Balanced Accuracy: 99%
+* Precision (Health Loans): 100%
+* Precision (High-risk Loans): 85%
+* Recall (Healthy Loans): 99%
+* Recall (High-risk Loans): 99%
 
-* Machine Learning Model 1: Logistic Regression with Original Data
-  * Description of Model 1 Accuracy, Precision, and Recall scores.
- 
-   Accuracy: The overall accuracy of the model is 0.99, indicating that it correctly classifies 99% of the instances.
-Precision:
- - Healthy loans (0): The model has a precision of 1.00, which means it's excellent at identifying true positives with very few false positives.
- - High-risk loans (1): The model has a precision of 0.87, indicating its moderate effectiveness in identifying high-risk loans with some false positives.
-Recall:
- - Healthy loans (0): The model has a recall of 1.00, which means it's correctly identifying nearly all instances of healthy loans with very few false     negatives.
- - High-risk loans (1): The model has a recall of 0.89, indicating its effectiveness in identifying high-risk loans with some false negatives.
+<img width="483" alt="Screenshot 2023-12-08 at 1 52 28 PM" src="https://github.com/njgeorge000158/credit-risk-classification/assets/137228821/aa699f09-e45a-4030-acd7-de834576c262">
 
-* Machine Learning Model 2: Logistic Regression with Resampled Data 
-  * Description of Model 2 Accuracy, Precision, and Recall scores.
-
-Accuracy: The overall accuracy of the model is 0.99, indicating that it correctly classifies 99% of the instances.
-Precision:
- - Healthy loans (0): The model has a precision of 0.99, which means it's excellent at identifying true positives with very few false positives.
- - High-risk loans (1): The model also has a precision of 0.99, indicating its effectiveness in identifying high-risk loans with very few false positives.
-Recall:
- - Healthy loans (0): The model has a recall of 0.99, which means it's correctly identifying nearly all instances of healthy loans with very few false  negatives.
- - High-risk loans (1): The model has a recall of 0.99, indicating its effectiveness in identifying high-risk loans with very few false negatives.
-
-
+- Machine Learning Model 2: Logistic Regression with Resampled Data 
+* Overall Accuracy: 99.4%
+* Balanced Accuracy: 99%
+* Precision (Health Loans): 100%
+* Precision (High-risk Loans): 84%
+* Recall (Healthy Loans): 99%
+* Recall (High-risk Loans): 91%
 
 ## Summary
 
-Summarize the results of the machine learning models, and include a recommendation on the model to use, if any. For example:
-* Which one seems to perform best? How do you know it performs best?
-* Does performance depend on the problem we are trying to solve? (For example, is it more important to predict the `1`'s, or predict the `0`'s? )
+The first Logistic Regression model does an excellent job predicting healthy loans with a small number of false positives and negatives leading to a precision score of 100%, a recall score of 99%, and an f1-score of 100%.  Nevertheless, this model less accurately predicts high-risk loans with a precision of 85%, a recall of 91%, and an f1-score of 88%. The balanced accuracy, 99%, is higher than the actual accuracy, 95%, because of the significant difference in labels value counts. The first model's potential for an increase in accuracy and the comparatively inadequate performance in predicting high-risk loans vs. health loans are concerning. Thus, the model warrants further optimization either by closing the value count gap with additional data or random oversampling: the second model uses resampling to compensate for this discrepancy.
 
-If you do not recommend any of the models, please justify your reasoning.
+In terms of accuracy, the second logistic regression model with random oversampling matches the first model for predicting healthy loans and outperforms it for high-risk loans. For instance, the number of accepted healthy loans falls (18,663 to 18,649); the number of rejected high-risk loans expands (563 to 615); the number of false positives increases slightly (102 to 116); and the number of false negatives significantly drops (56 to 4). Moreover, using random oversampling to generate additional synthetic samples for the minority label class eliminates the label value count discrepancy leading to, among other things, the balanced accuracy score matching the overall accuracy score, 99%. For healthy loans, both models have 100% precision, 99% recall, and 100% f1-scores; for high-risk loans, although the precision, 85%, declines by 1% to 84%, the recall, 92%, increases by 8% to 99%, and the f1-score, 88%, increases by 3% to 91%. Consequently, using random oversampling with the logistic regression model maintains its identification of healthy loans while improving its identification of high-risk loans.
 
-
-
-Based on the results, the logistic regression model trained with resampled data (Model 2) performs better than the model trained with original data (Model 1), particularly in predicting high-risk loans. Model 2 demonstrates higher precision and recall scores for high-risk loans, which is crucial in minimizing potential financial losses for the lending company.
-
-I recommend using the logistic regression model trained with resampled data (Model 2) for credit risk analysis, as it shows a significant improvement in predicting high-risk loans compared to the original model. This model will help the company effectively assess loan applications and make informed decisions when approving or rejecting loans, thus mitigating credit risk.
+Ultimately, the second Logistic Regression model trained with resampled data demonstrates a significant improvement in predicting high-risk loans while maintaining comparable performance for healthy loans. Consequently, I recommend it as a better choice for credit risk analysis.
