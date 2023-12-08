@@ -4,7 +4,7 @@
 
 # **Credit Risk Classification with Logistic Regression using Scikit-learn**
 
-## Overview of the Analysis
+## **Overview of the Analysis**
 
 The purpose of this analysis is to evaluate the performance of two supervised machine learning models for predicting consumer loan credit risk. These Logistic Regression models use a data set of historical activity from a peer-to-peer lending services company to identify the creditworthiness of borrowers. Specifically, the models predict whether a loan is healthy or high-risk by analyzing the provided applicant information such as loan size, interest rate, borrower income, debt-to-income ratio, number of accounts, derogatory marks, and total debt.  Moreover, although the data set is comprehensive, there is significantly more information about healthy loans than high-risk loans (75,036 records vs. 2,500 records). With this in mind, the second model compensates for this inconsistency.
 
@@ -20,9 +20,9 @@ To accomplish the analysis, the machine learning process includes the following 
 10. Create and fit another Logistic Regression model with the resampled data.
 11. Evaluate the performance of the second model using the same metrics.
 
-## Results
+## **Results**
 
-- Machine Learning Model 1: Logistic Regression with Original Data
+### **Machine Learning Model 1: Logistic Regression with Original Data**
 * Overall Accuracy: 95.2%
 * Balanced Accuracy: 99%
 * Precision (Health Loans): 100%
@@ -32,7 +32,7 @@ To accomplish the analysis, the machine learning process includes the following 
 
 <img width="483" alt="Screenshot 2023-12-08 at 1 52 28 PM" src="https://github.com/njgeorge000158/credit-risk-classification/assets/137228821/aa699f09-e45a-4030-acd7-de834576c262">
 
-- Machine Learning Model 2: Logistic Regression with Resampled Data 
+### **Machine Learning Model 2: Logistic Regression with Resampled Data**
 * Overall Accuracy: 99.4%
 * Balanced Accuracy: 99%
 * Precision (Health Loans): 100%
@@ -42,7 +42,7 @@ To accomplish the analysis, the machine learning process includes the following 
 
 <img width="491" alt="Screenshot 2023-12-08 at 2 12 14 PM" src="https://github.com/njgeorge000158/credit-risk-classification/assets/137228821/3ba7b976-5cac-4154-9247-5a2dec85c37d">
 
-## Summary
+## **Summary**
 
 The first Logistic Regression model does an excellent job predicting healthy loans with a small number of false positives and negatives leading to a precision score of 100%, a recall score of 99%, and an f1-score of 100%.  Nevertheless, this model less accurately predicts high-risk loans with a precision of 85%, a recall of 91%, and an f1-score of 88%. The balanced accuracy, 99%, is higher than the actual accuracy, 95%, because of the significant difference in labels's value counts. The first model's potential for an increase in accuracy and the comparatively inadequate performance in predicting high-risk loans vs. health loans are concerning. Thus, the model warrants further optimization either by closing the value count gap with additional data or random oversampling: the second model uses the latter to solve this problem.
 
